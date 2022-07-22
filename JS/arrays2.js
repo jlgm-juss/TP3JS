@@ -8,16 +8,30 @@ Sustituye el elemento que ocupa la segunda posición por la ciudad de 'Barcelona
 */
 
 //almacenarlas en un array
-let ciudades = ["Madrid", "Barcelona", "Roma", "Berlin", "Londres"];
-
+let ciudades = [];
 //Crear scrpt que solicite mediante prompt el nombre de ciudades
+
+do {
+
+  
+for(i = 0; i <= 2; i++){
+  ciudades = prompt('Ingrese una ciudad: ');
+  if (ciudades === null){
+    ciudades = '';
+  }else(confirm('¿Desea continuar?..'));
+    document.write('<br>'+ciudades);
+}
+
+}while (ciudades === true);
 
 //mostrar la longitud del arreglo
 
-for (i = 0; i <= 4; i++) {
-    ciudades = prompt("Ingrese el nombre de una ciudad: ");
+/*for (i = 0; i <= 4; i++) {
+  ciudades = prompt("Ingrese el nombre de una ciudad: "); 
+    
+    
   document.write('<br>'+ciudades);
-}
+}*/
 
 //document.write('Eligió: '+ ciudades);
 //ciudades = ciudades.length
