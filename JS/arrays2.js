@@ -11,6 +11,7 @@ Sustituye el elemento que ocupa la segunda posición por la ciudad de 'Barcelona
 let ciudades = [];
 //Crear scrpt que solicite mediante prompt el nombre de ciudades
 
+
 do {
 
   
@@ -18,8 +19,9 @@ for(i = 0; i <= 2; i++){
   ciudades = prompt('Ingrese una ciudad: ');
   if (ciudades === null){
     ciudades = '';
-  }else(confirm('¿Desea continuar?..'));
+  }
     document.write('<br>'+ciudades);
+    
 }
 
 }while (ciudades === true);
