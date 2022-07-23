@@ -3,7 +3,7 @@
 
 function info(cadena) {
 
-    let resultado = "<br>La cadena \""+cadena+"\" ";
+    let resultado = "<br>La cadena: "+cadena+" ";
   
     // Comprobar mayúsculas y minúsculas
     if(cadena == cadena.toUpperCase()) {
