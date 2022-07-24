@@ -1,49 +1,25 @@
-/* 2-  Crear un script que solicite al usuario mediante un prompt el nombre de ciudades y almacenarlas en un arreglo, cuando el usuario selecciona cancelar se debe mostrar el arreglo generado, luego realizar las siguientes acciones:
-
-Mostrar la longitud del arreglo.
-Mostrar en el documento web los ítems de las posiciones primera, tercera y última.
-Añade en última posición la ciudad de París.
-Escribe por pantalla el elemento que ocupa la segunda posición.
-Sustituye el elemento que ocupa la segunda posición por la ciudad de 'Barcelona'.
-*/
-
-//almacenarlas en un array
-let ciudades = [];
-//Crear scrpt que solicite mediante prompt el nombre de ciudades
-
-
+let nombreCiudades = [];
 do {
+  let ciudades = prompt("Ingrese el nombre de ciudades");
+  nombreCiudades.push(ciudades);
+} while (confirm("¿Quiere escribir mas Ciudades?"));
+document.write(`<br>${nombreCiudades}</br>`)
 
-  
-for(i = 0; i <= 2; i++){
-  ciudades = prompt('Ingrese una ciudad: ');
-  if (ciudades === null){
-    ciudades = '';
-  }
-    document.write('<br>'+ciudades);
-    
-}
+document.write(`<br>Longitud del array: ${nombreCiudades.length}</br>`)
 
-}while (ciudades === true);
+document.write
+(`
+  <br>Item 1: ${nombreCiudades[0]}</br> 
+  <br>Item 3: ${nombreCiudades[2]}</br> 
+  <br>Ultimo item: ${nombreCiudades[nombreCiudades.length - 1]}</br> 
+`)
 
-//mostrar la longitud del arreglo
+nombreCiudades.push('Paris')
 
-/*for (i = 0; i <= 4; i++) {
-  ciudades = prompt("Ingrese el nombre de una ciudad: "); 
-    
-    
-  document.write('<br>'+ciudades);
-}*/
+document.write(`<br>${nombreCiudades}</br>`)
 
-//document.write('Eligió: '+ ciudades);
-//ciudades = ciudades.length
+document.write(`<br>Item 2: ${nombreCiudades[1]}</br>`
+)
+nombreCiudades[1] = 'Barcelona'
 
-//document.write(ciudades[ciudades.length-1]);
-
-//document.write(ciudades[0,2,4]);
-
-//ciudades.push('Paris');
-
-//(ciudades.indexOf['Roma']);
-
-//ciudades.splice(1,0);
+document.write(`<br>${nombreCiudades}</br>`)
